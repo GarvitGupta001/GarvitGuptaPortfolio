@@ -1,8 +1,12 @@
+import { Routes, Route } from 'react-router-dom'
 import React from 'react'
+import UnderConstruction from './pages/UnderConstruction'
 
 const App = () => {
   return (
-    <div>App</div>
+    <Routes>
+        <Route path='/' element={<UnderConstruction />} />
+    </Routes>
   )
 }
 
