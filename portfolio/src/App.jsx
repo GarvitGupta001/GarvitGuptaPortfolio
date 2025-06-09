@@ -5,9 +5,7 @@ import './app.css'
 
 const App = () => {
   return (
-    <Routes>
-        <Route path='/' element={<UnderConstruction />} />
-    </Routes>
+    <UnderConstruction />
   )
 }
 
