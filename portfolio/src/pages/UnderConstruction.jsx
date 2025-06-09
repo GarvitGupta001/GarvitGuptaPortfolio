@@ -11,7 +11,7 @@ const UnderConstruction = () => {
   return (
     <>
     <div className={isDark ?
-        'bg-black h-screen w-screen' :
+        'bg-[#11151C] h-screen w-screen' :
         'bg-white h-screen w-screen'}>
         <img src={isDark ? bulb_off : bulb_on} 
         onClick={switchTheme}

@@ -1,11 +1,12 @@
-import { Routes, Route } from 'react-router-dom'
 import React from 'react'
-import UnderConstruction from './pages/UnderConstruction'
 import './app.css'
+import Nav from './components/Nav'
 
 const App = () => {
   return (
-    <UnderConstruction />
+    <>
+    <Nav />
+    </>
   )
 }
 
