@@ -21,7 +21,8 @@ const Cursor = () => {
     }
   }, [])
 
-  return <div id="cursor" className="w-4 h-4 bg-white rounded-full fixed top-0 left-0 pointer-events-none z-50" />
+  return <div id="cursor" />
 }
 
 export default Cursor
+// className="w-4 h-4 bg-white rounded-full fixed top-0 left-0 pointer-events-none z-50" 

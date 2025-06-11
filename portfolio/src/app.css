@@ -3,6 +3,21 @@ body {
     cursor: none;
 }
 
+#cursor {
+    height: 20px;
+    width: 20px;
+    background: white;
+    opacity: 0.8;
+    pointer-events: none;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 11;
+}
+
+a{
+    cursor: none;
+}
+
 nav {
     z-index: 10;
     border-radius: 30px;
