@@ -54,9 +54,9 @@ const App = () => {
         ))}
       </div>
     </div>
-    <div id="page2" className="page">
+{/*     <div id="page2" className="page">
 
-    </div>
+    </div> */}
     </>
   )
 }
