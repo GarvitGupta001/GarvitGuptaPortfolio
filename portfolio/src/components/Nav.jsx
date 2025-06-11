@@ -1,6 +1,6 @@
 import React from 'react'
 import gsap from 'gsap'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import menu from '../assets/menu.svg'
 import profile from '../assets/profile.svg'
@@ -19,19 +19,28 @@ const Nav = () => {
             gsap.to("nav", {
                 duration: 0.5,
                 height: 'auto',
-                boxShadow: '0px 4px 20px rgba(89, 98, 115, 0.8)'
             })
         } else {
             gsap.to("nav", {
                 duration: 0.5,
                 height: 52,
-                boxShadow: '0px 0px 0px rgba(89, 98, 115, 0.8)'
             })
         }
     }, [expanded])
+
+    const nav = useRef(null)
+    useGSAP(()=>{
+        gsap.from(nav.current, {
+            y: 10,
+            opacity: 0,
+            duration: 0.5,
+            delay: 0.2,
+        })
+    })
     
     return (
-    <nav 
+    <nav
+    ref={nav} 
     className='fixed top-5 left-5 border-[#cfcfcf] flex flex-col items-center p-1 overflow-y-hidden h-[52px]'
     onMouseEnter={() => setExpanded(true)}
     onMouseLeave={() => setExpanded(false)}>
