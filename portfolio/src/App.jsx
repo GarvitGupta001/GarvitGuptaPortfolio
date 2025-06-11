@@ -24,7 +24,7 @@ const App = () => {
     <Nav />
     <div id="page1" className='page'> 
       <div id="image">
-        <img src='./src/assets/pfp.jpg'/>
+        <img src='pfp.jpg'/>
       </div>
       <div id="about">
         <h1>Garvit Gupta</h1>
