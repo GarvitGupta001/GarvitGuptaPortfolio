@@ -4,8 +4,8 @@ body {
 }
 
 #cursor {
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     background: white;
     opacity: 0.8;
     pointer-events: none;

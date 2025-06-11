@@ -10,12 +10,30 @@ gsap.registerPlugin(ScrollTrigger)
 const App = () => {
   const skills = ['React Js','Node','Express Js','Tailwind CSS','Flask','Mongo DB','MySQL','Figma','C','Python','Javascript','REST APIs','JWT Auth','GSAP']
   
+  const tl = gsap.timeline()
+
   useGSAP(() => {
-    gsap.from("#image, #about, #skills", {
-      duration: 0.5,
+    tl.from('#image', {
       opacity: 0,
       y: 20,
-      ease: 'power2.inOut',
+      duration: 0.5,
+      delay: 0.2,
+    }).from('#about h1', {
+      opacity: 0,
+      y: 20,
+      duration: 0.5,
+      delay: -0.3,
+    }).from('#about p', {
+      opacity: 0,
+      y: 20,
+      duration: 0.5,
+      delay: -0.3,
+    }).from('.skill', {
+      opacity: 0,
+      y: 20,
+      duration: 0.3,
+      stagger: 0.1,
+      delay: -0.3,
     })
   })
   return (
