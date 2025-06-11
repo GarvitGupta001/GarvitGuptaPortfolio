@@ -11,6 +11,7 @@ body {
     pointer-events: none;
     border-radius: 50%;
     position: fixed;
+    top: -25px;
     z-index: 11;
 }
 
