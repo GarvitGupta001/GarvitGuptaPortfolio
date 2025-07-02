@@ -13,6 +13,7 @@ import resumePDF from '../assets/My_Resume.pdf'
 
 const Nav = () => {
     const [expanded, setExpanded] = useState(false)
+    const nav = useRef(null)
     
     useGSAP(() => {
         if(expanded) {
@@ -28,15 +29,6 @@ const Nav = () => {
         }
     }, [expanded])
 
-    const nav = useRef(null)
-    useGSAP(()=>{
-        gsap.from(nav.current, {
-            y: 10,
-            opacity: 0,
-            duration: 0.5,
-            delay: 0.2,
-        })
-    })
     
     return (
     <nav
@@ -45,10 +37,10 @@ const Nav = () => {
     onMouseEnter={() => setExpanded(true)}
     onMouseLeave={() => setExpanded(false)}>
         <img src={menu} alt="" className='p-[7px]'/>
-        <a href="" className="nav-icon">
+        <a href="#profile" className="nav-icon">
             <img src={profile} alt="" className='p-[7px]'/>
         </a>
-        <a href="" className="nav-icon">
+        <a href="#projects" className="nav-icon">
             <img src={projects} alt="" className='p-[7px]'/>
         </a>
         <a href='https://github.com/GarvitGupta001' target='_blank' rel='noopener noreferrer' className="nav-icon">

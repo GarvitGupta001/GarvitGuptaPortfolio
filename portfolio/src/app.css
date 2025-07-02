@@ -1,6 +1,12 @@
+@import "tailwindcss";
+
+html{
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #11151C;
-    cursor: none;
+    background-color: black;
+    
 }
 
 #cursor {
@@ -11,8 +17,9 @@ body {
     pointer-events: none;
     border-radius: 50%;
     position: fixed;
-    top: -25px;
-    z-index: 11;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: exclusion;
 }
 
 a{
@@ -29,7 +36,7 @@ nav {
     height: 100vh;
 }
 
-#page1{
+#profile{
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 5fr 6fr;
@@ -71,24 +78,4 @@ nav {
 #about p{
     font-size: 20px;
     text-align: center;
-}
-
-#skills{
-    grid-area: 2 / 2 / 3 / 3;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    height: min-content;
-    padding: 60px 20px 0px 20px;
-}
-
-.skill{
-    font-size: 20px;
-    text-align: center;
-    background-color: #596273;
-    color: white;
-    padding: 3px 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
 }

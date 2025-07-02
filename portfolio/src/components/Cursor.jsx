@@ -1,28 +1,46 @@
-import React, { useEffect } from 'react'
-import gsap from 'gsap'
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
+const CURSOR_SIZE = 16;
 
 const Cursor = () => {
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      const x = e.clientX
-      const y = e.clientY
-      gsap.to("#cursor", {
-        x,
-        y,
-        duration: 0.2,
-      })
-      console.log(e)
-    }
+  const cursorRef = useRef(null);
 
-    document.getElementById("root").addEventListener("mousemove", handleMouseMove)
+  useGSAP(() => {
+    const moveCursor = (e) => {
+      if (cursorRef.current) {
+        const x = e.clientX
+        const y = e.clientY
+        gsap.to(cursorRef.current, {
+          x,
+          y,
+          duration: 0.2,
+          overwrite: "auto",
+        });
+      }
+    };
+
+    document.addEventListener("mousemove", moveCursor);
 
     return () => {
-      document.getElementById("root").removeEventListener("mousemove", handleMouseMove)
-    }
-  }, [])
+      document.removeEventListener("mousemove", moveCursor);
+    };
+  }, []);
 
-  return <div id="cursor" />
-}
+  useEffect(() => {
+    document.body.style.cursor = "none";
+    return () => {
+      document.body.style.cursor = "";
+    };
+  }, []);
 
-export default Cursor
-// className="w-4 h-4 bg-white rounded-full fixed top-0 left-0 pointer-events-none z-50" 
+  return (
+    <div
+      id="cursor"
+      ref={cursorRef}
+    />
+  );
+};
+
+export default Cursor;
