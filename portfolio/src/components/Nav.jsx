@@ -14,6 +14,13 @@ import resumePDF from '../assets/My_Resume.pdf'
 const Nav = () => {
     const [expanded, setExpanded] = useState(false)
     const nav = useRef(null)
+
+    const scrollToElement = (elementId) => {
+        const element = document.getElementById(elementId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
     
     useGSAP(() => {
         if(expanded) {
@@ -37,10 +44,10 @@ const Nav = () => {
     onMouseEnter={() => setExpanded(true)}
     onMouseLeave={() => setExpanded(false)}>
         <img src={menu} alt="" className='p-[7px]'/>
-        <a href="#profile" className="nav-icon">
+        <a className="nav-icon" on onClick={() => scrollToElement('profile')}>
             <img src={profile} alt="" className='p-[7px]'/>
         </a>
-        <a href="#projects" className="nav-icon">
+        <a className="nav-icon" onClick={() => scrollToElement('projects')}>
             <img src={projects} alt="" className='p-[7px]'/>
         </a>
         <a href='https://github.com/GarvitGupta001' target='_blank' rel='noopener noreferrer' className="nav-icon">
