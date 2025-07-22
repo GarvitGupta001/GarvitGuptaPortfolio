@@ -5,14 +5,12 @@ import Cursor from "./components/Cursor";
 import Profile from "./components/Profile";
 import Projects from "./components/Projects";
 import Background from "./components/Background";
-import { Spotlight } from "./components/ui/spotlight-new";
 
 const App = () => {
   return (
     <>
       <div className="overflow-x-hidden h-screen w-screen relative no-scrollbar">
         <Background />
-        <Spotlight />
         <Cursor />
         <Nav />
         <Profile />
