@@ -20,7 +20,7 @@ const App = () => {
     }, []);
     return (
         <>
-            <div className="overflow-x-hidden h-screen w-screen relative no-scrollbar">
+            <div className="overflow-x-hidden h-screen w-screen relative no-scrollbar bg-[#000807]">
                 {windowWidth >= 1024 ? <Cursor /> : null}
                 <Nav />
                 <div className="h-screen w-screen">

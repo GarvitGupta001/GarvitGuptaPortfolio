@@ -70,7 +70,7 @@ const Nav = () => {
     return (
         <nav
             ref={nav}
-            className="fixed top-5 left-5 border-[#cfcfcf] flex lg:flex-col items-center p-1 overflow-hidden h-[52px] w-[52px] backdrop-brightness-35"
+            className="fixed bg-[#111111] top-5 left-5 border-[#cfcfcf] flex lg:flex-col items-center p-1 overflow-hidden h-[52px] w-[52px] backdrop-brightness-35"
             onMouseEnter={isLaptop ? () => setExpanded(true) : null}
             onMouseLeave={isLaptop ? () => setExpanded(false) : null}
         >

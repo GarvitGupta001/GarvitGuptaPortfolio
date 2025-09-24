@@ -13,10 +13,6 @@ html{
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: black; 
-}
-
 #cursor {
     height: 15px;
     width: 15px;
