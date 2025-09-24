@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black; 
+}
+
+#cursor {
+    height: 15px;
+    width: 15px;
+    background: white;
+    opacity: 0.8;
+    pointer-events: none;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: exclusion;
+}
+
+a{
+    cursor: none;
+}
+
+nav {
+    z-index: 10;
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(89, 98, 115, 0.8);
+}
+
+.page {
+    height: 100vh;
+}
